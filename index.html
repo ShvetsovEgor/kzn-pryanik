@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Казанские пряники - Оптовая продажа пряников в Казани</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <script src="https://cdn.sheetjs.com/xlsx-0.20.1/package/dist/xlsx.full.min.js"></script>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">
+                <img src="images/logo.png" alt="Казанские пряники" class="header-logo">
+                <img src="images/text.png" alt="Казанские пряники" class="header-text">
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#main">Главная</a></li>
+                <li><a href="#catalog">Каталог</a></li>
+                <li><a href="#about">О компании</a></li>
+                <li><a href="#contacts">Контакты</a></li>
+            </ul>
+            <div class="nav-buttons">
+                <a href="Прайс.pdf" class="btn btn-primary" download>Получить прайс</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="main" class="hero">
+            <div class="container">
+                <h1>Казанские пряники</h1>
+                <p class="subtitle">Вдохновлено традициями, сделано с любовью</p>
+            </div>
+        </section>
+
+        <section id="why-us" class="why-us">
+            <div class="container">
+                <h2>Почему мы?</h2>
+                <div class="advantages-grid">
+                    <div class="advantage-card">
+                        <div class="advantage-icon">
+                            <img src="images/healthy.svg" alt="Натуральный состав">
+                        </div>
+                        <h3>Натуральный состав</h3>
+                        <p>Без консервантов и добавок, подтвержденный сертификатами</p>
+                    </div>
+                    <div class="advantage-card">
+                        <div class="advantage-icon">
+                            <img src="images/recipe.svg" alt="Авторские рецепты">
+                        </div>
+                        <h3>Авторские рецепты</h3>
+                        <p>С казанским колоритом</p>
+                    </div>
+                    <div class="advantage-card">
+                        <div class="advantage-icon">
+                            <img src="images/handmade.svg" alt="Ручная работа">
+                        </div>
+                        <h3>Ручная работа</h3>
+                        <p>Каждый пряник с душой</p>
+                    </div>
+                    <div class="advantage-card">
+                        <div class="advantage-icon">
+                            <img src="images/delivery.svg" alt="Доставка">
+                        </div>
+                        <h3>Бесплатная доставка</h3>
+                        <p>По городу и межгород</p>
+                    </div>
+                    <div class="advantage-card">
+                        <div class="advantage-icon">
+                            <img src="images/halal.svg" alt="Халяль">
+                        </div>
+                        <h3>Халяль-продукт</h3>
+                        <p>Соответствует всем стандартам</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="catalog" class="catalog">
+            <div class="container">
+                <h2>Наша продукция</h2>
+                <div class="catalog-grid">
+                    <!-- Product cards will be added dynamically via JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container">
+                <div class="about-content">
+                    <div class="price-request-content">
+                        <h2>О компании</h2>
+                        <div class="about-text">
+                            <p>Мы - компания, специализирующаяся на производстве и продаже пряников. Наша продукция изготавливается по традиционным рецептам с использованием только натуральных ингредиентов.</p>
+                            <p>Мы гарантируем высокое качество нашей продукции и индивидуальный подход к каждому клиенту.</p>
+                        </div>
+                    </div>
+
+                    <div class="price-request-content">
+                        <h2>Свяжитесь с нами</h2>
+                        <form class="price-request-form" id="priceRequestForm">
+                            <input type="text" name="name" placeholder="Ваше имя" required>
+                            <input type="tel" name="phone" placeholder="Телефон" required>
+                            <button type="submit" class="btn btn-primary">Отправить заявку</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacts" class="contacts">
+            <div class="container">
+                <h2>Контакты</h2>
+                <div class="contacts-content">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <h3>Адрес</h3>
+                            <p>422624, Лаишевский муниципальный район РТ,<br>с. Столбище, ул. Советская, д. 2А</p>
+                        </div>
+                        <div class="contact-item">
+                            <h3>Телефон</h3>
+                            <p>+7 (993) 405-90-35<br>+7 (999) 157-99-90</p>
+                        </div>
+                        <div class="contact-item">
+                            <h3>Email</h3>
+                            <p>kzn_pryanik@mail.ru</p>
+                        </div>
+                        <div class="qr-code">
+                            <img src="images/qr-code.png" alt="QR-код для связи">
+                        </div>
+                    </div>
+                    <div class="map">
+                        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Aeb1e34553f0b782ee7dda5d5cf59e365e0466974a0b42c5b2ce3b2f69d4fc0d2&amp;source=constructor" width="500" height="400" frameborder="0"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/logo.png" alt="Казанские пряники" class="footer-logo-img">
+                    <img src="images/text.png" alt="Казанские пряники" class="footer-text-img">
+                </div>
+                <div class="footer-links">
+                    <h3>Навигация</h3>
+                    <ul>
+                        <li><a href="#main">Главная</a></li>
+                        <li><a href="#catalog">Каталог</a></li>
+                        <li><a href="#about">О компании</a></li>
+                        <li><a href="#contacts">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>Мы в соцсетях</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link">VK</a>
+                        <a href="#" class="social-link">Telegram</a>
+                        <a href="#" class="social-link">WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Казанские пряники. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

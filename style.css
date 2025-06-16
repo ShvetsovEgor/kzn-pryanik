@@ -1,17 +1,18 @@
 :root {
+    --color-primary: #0A935F;
+    --color-primary-dark: #087a4f;
+    --color-primary-light: #0cb06f;
+    --color-text: #333;
+    --color-light: #f5f5f5;
+    --white: #fff;
+    --border-radius: 8px;
+    --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
     --primary-color: #1B5E20; /* Более темный зеленый */
     --secondary-color: #388E3C; /* Насыщенный зеленый */
     --accent-color: #66BB6A; /* Яркий зеленый */
     --text-color: #212121; /* Почти черный для текста */
     --light-bg: #E8F5E9; /* Светлый зеленый фон */
-    --white: #fff;
-    --shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    --shadow-hover: 0 8px 15px rgba(0, 0, 0, 0.15);
-    --border-radius: 8px;
-    --transition: all 0.3s ease;
-    --color-background: #FFF8DC;
-    --color-text: #4A3728;
-    --color-light: #F5DEB3;
     --font-main: 'Montserrat', sans-serif;
     --primary: #ff9f43;
     --primary-light: #ffb976;
@@ -106,15 +107,20 @@ body {
 }
 
 .btn-primary {
-    background-color: var(--primary-color);
+    background: var(--color-primary);
     color: var(--white);
-    box-shadow: var(--shadow);
+    border: none;
+    padding: 12px 24px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: var(--transition);
+    text-decoration: none;
+    display: inline-block;
 }
 
 .btn-primary:hover {
-    background-color: var(--secondary-color);
+    background: var(--color-primary-dark);
     transform: translateY(-2px);
-    box-shadow: var(--shadow-hover);
 }
 
 .btn-large {
@@ -416,7 +422,7 @@ body {
     width: 100%;
     padding: 1rem;
     margin-bottom: 1rem;
-    border: 2px solid var(--white);
+    border: 2px solid var(--color-light);
     border-radius: var(--border-radius);
     transition: var(--transition);
 }
@@ -424,7 +430,7 @@ body {
 .price-request-form input:focus {
     border-color: var(--color-primary);
     outline: none;
-    box-shadow: 0 0 0 3px rgba(27, 94, 32, 0.1);
+    box-shadow: 0 0 0 3px rgba(10, 147, 95, 0.1);
 }
 
 .price-request-form .btn {
@@ -499,9 +505,10 @@ body {
 
 /* Footer */
 .footer {
-    background-color: var(--primary-color);
+    background: var(--color-primary);
     color: var(--white);
     padding: 60px 0 20px;
+    margin-top: 80px;
 }
 
 .footer-content {
@@ -742,16 +749,16 @@ body {
 
 .price-request-form input,
 .price-request-form textarea {
-    border: 2px solid var(--light-bg);
+    border: 2px solid var(--color-light);
     border-radius: var(--border-radius);
     transition: var(--transition);
 }
 
 .price-request-form input:focus,
 .price-request-form textarea:focus {
-    border-color: var(--primary-color);
+    border-color: var(--color-primary);
     outline: none;
-    box-shadow: 0 0 0 3px rgba(27, 94, 32, 0.1);
+    box-shadow: 0 0 0 3px rgba(10, 147, 95, 0.1);
 }
 
 .hero-text {
@@ -1207,7 +1214,7 @@ body {
 .price-request-form input:focus {
     border-color: var(--color-primary);
     outline: none;
-    box-shadow: 0 0 0 3px rgba(27, 94, 32, 0.1);
+    box-shadow: 0 0 0 3px rgba(10, 147, 95, 0.1);
 }
 
 .price-request-form .btn {
@@ -1256,9 +1263,18 @@ body {
 .price-request-form input:focus {
     border-color: var(--color-primary);
     outline: none;
-    box-shadow: 0 0 0 3px rgba(27, 94, 32, 0.1);
+    box-shadow: 0 0 0 3px rgba(10, 147, 95, 0.1);
 }
 
 .price-request-form .btn {
     width: 100%;
+}
+
+/* Section Divider */
+.section-divider {
+    height: 80px;
+    background: url('images/ornament.png') repeat-x center;
+    background-size: auto 80px;
+    margin: 80px 0;
+    opacity: 0.8;
 }

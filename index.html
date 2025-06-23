@@ -9,7 +9,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-    <script src="https://cdn.sheetjs.com/xlsx-0.20.1/package/dist/xlsx.full.min.js"></script>
 </head>
 <body>
     <header class="header">
@@ -26,8 +25,21 @@
             </ul>
             <div class="nav-buttons">
                 <a href="Прайс.pdf" class="btn btn-primary" download>Получить прайс</a>
+                <button class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
         </nav>
+        <div class="mobile-menu">
+            <ul>
+                <li><a href="#main">Главная</a></li>
+                <li><a href="#catalog">Каталог</a></li>
+                <li><a href="#about">О компании</a></li>
+                <li><a href="#contacts">Контакты</a></li>
+            </ul>
+        </div>
     </header>
 
     <main>
@@ -96,19 +108,112 @@
 
         <div class="section-divider"></div>
 
-        <section id="about" class="about">
+        <section id="certificates" class="certificates">
             <div class="container">
-                <div class="about-content">
-                    <div class="price-request-content">
-                        <h2>О компании</h2>
-                        <div class="about-text">
-                            <p>Мы - компания, специализирующаяся на производстве и продаже пряников. Наша продукция изготавливается по традиционным рецептам с использованием только натуральных ингредиентов.</p>
-                            <p>Мы гарантируем высокое качество нашей продукции и индивидуальный подход к каждому клиенту.</p>
+                <h2>Наши сертификаты</h2>
+                <div class="certificates-carousel">
+                    <button class="carousel-btn prev-btn">&lt;</button>
+                    <div class="carousel-container">
+                        <div class="carousel-track">
+                            <div class="carousel-slide">
+                                <img src="images/certificate1.jpg" alt="Сертификат качества" onerror="this.src='images/placeholder.png'">
+                                <h3>Сертификат качества</h3>
+                                <p>Соответствие стандартам ГОСТ</p>
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="images/certificate2.jpg" alt="Халяль сертификат" onerror="this.src='images/placeholder.png'">
+                                <h3>Халяль сертификат</h3>
+                                <p>Соответствие исламским стандартам</p>
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="images/certificate3.jpg" alt="Сертификат безопасности" onerror="this.src='images/placeholder.png'">
+                                <h3>Сертификат безопасности</h3>
+                                <p>Безопасность пищевых продуктов</p>
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="images/certificate4.jpg" alt="Сертификат ISO" onerror="this.src='images/placeholder.png'">
+                                <h3>Сертификат ISO</h3>
+                                <p>Международные стандарты качества</p>
+                            </div>
                         </div>
                     </div>
+                    <button class="carousel-btn next-btn">&gt;</button>
+                </div>
+                <div class="carousel-dots">
+                    <span class="dot active" data-slide="0"></span>
+                    <span class="dot" data-slide="1"></span>
+                    <span class="dot" data-slide="2"></span>
+                    <span class="dot" data-slide="3"></span>
+                </div>
+            </div>
+        </section>
 
+        <div class="section-divider"></div>
+
+        <section id="packaging" class="packaging">
+            <div class="container">
+                <h2>Типы упаковок</h2>
+                <div class="packaging-grid">
+                    <div class="packaging-item">
+                        <img src="images/placeholder.png" alt="Коробка 4 кг" onerror="this.src='images/placeholder.png'">
+                        <h3>Коробка 4 кг</h3>
+                        <p>Большая коробка для крупных заказов и подарков.</p>
+                    </div>
+                    <div class="packaging-item">
+                        <img src="images/placeholder.png" alt="Коробка 2,5 кг" onerror="this.src='images/placeholder.png'">
+                        <h3>Коробка 2,5 кг</h3>
+                        <p>Универсальный вариант для семьи или офиса.</p>
+                    </div>
+                    <div class="packaging-item">
+                        <img src="images/placeholder.png" alt="Коробка 1 кг" onerror="this.src='images/placeholder.png'">
+                        <h3>Коробка 1 кг</h3>
+                        <p>Компактная коробка для небольших подарков и дегустации.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <section id="about" class="about">
+            <div class="container">
+                <h2>О компании</h2>
+                <div class="about-grid">
+                    <div class="about-card">
+                        <div class="about-icon">📅</div>
+                        <h3>История</h3>
+                        <p>Работаем с 2019 года. Производим до 100 тонн продукции в месяц, обеспечивая стабильное качество и своевременные поставки.</p>
+                    </div>
+                    <div class="about-card">
+                        <div class="about-icon">⭐</div>
+                        <h3>Качество</h3>
+                        <p>Используем только натуральные ингредиенты. Наша продукция соответствует всем стандартам ГОСТ и имеет сертификаты качества.</p>
+                    </div>
+                    <div class="about-card">
+                        <div class="about-icon">🌿</div>
+                        <h3>Свежесть</h3>
+                        <p>Каждая партия изготавливается свежей. Соблюдаем строгие сроки хранения и условия производства.</p>
+                    </div>
+                    <div class="about-card">
+                        <div class="about-icon">🍯</div>
+                        <h3>Вкус</h3>
+                        <p>Авторские рецепты с казанским колоритом. Традиционные технологии в сочетании с современными стандартами.</p>
+                    </div>
+                    <div class="about-card">
+                        <div class="about-icon">⚡</div>
+                        <h3>Оперативность</h3>
+                        <p>Быстрая обработка заказов. Бесплатная доставка по городу и межгород. Готовы к срочным поставкам.</p>
+                    </div>
+                    <div class="about-card">
+                        <div class="about-icon">🤝</div>
+                        <h3>Индивидуальный подход</h3>
+                        <p>Работаем с каждым клиентом персонально. Готовы к выполнению специальных заказов и разработке новых рецептов.</p>
+                    </div>
+                </div>
+                
+                <div class="about-content">
                     <div class="price-request-content">
-                        <h2>Свяжитесь с нами</h2>
+                        <h3>Свяжитесь с нами</h3>
                         <form class="price-request-form" id="priceRequestForm">
                             <input type="text" name="name" placeholder="Ваше имя" required>
                             <input type="tel" name="phone" placeholder="Телефон" required>
@@ -148,6 +253,8 @@
                 </div>
             </div>
         </section>
+
+        <div class="section-divider"></div>
     </main>
 
     <footer class="footer">
@@ -169,9 +276,8 @@
                 <div class="footer-social">
                     <h3>Мы в соцсетях</h3>
                     <div class="social-links">
-                        <a href="#" class="social-link">VK</a>
-                        <a href="#" class="social-link">Telegram</a>
-                        <a href="#" class="social-link">WhatsApp</a>
+                        <a href="https://t.me/kzn_pryanik" class="social-link" target="_blank" rel="noopener">Telegram</a>
+                        <a href="https://wa.me/79934059035" class="social-link" target="_blank" rel="noopener">WhatsApp</a>
                     </div>
                 </div>
             </div>
@@ -180,6 +286,18 @@
             </div>
         </div>
     </footer>
+
+    <!-- Modal for image viewing -->
+    <div id="imageModal" class="image-modal">
+        <div class="image-modal-content">
+            <span class="image-modal-close">&times;</span>
+            <img id="modalImage" src="" alt="Увеличенное изображение">
+            <div class="image-modal-caption">
+                <h3 id="modalTitle"></h3>
+                <p id="modalDescription"></p>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>

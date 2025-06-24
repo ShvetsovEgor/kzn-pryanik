@@ -44,7 +44,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     <p>${product.description}</p>
                     <div class="product-details">
                         <span class="price">${product.price} ₽/кг</span>
-                        <span class="weight">${product.weight}</span>
                     </div>
                     <p class="composition">${product.composition}</p>
                     <button class="btn btn-primary request-price" data-product="${product.id}">Запросить цену</button>
